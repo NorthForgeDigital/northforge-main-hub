@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 
 const navLinks = [
   { href: "#services", label: "Services" },
-  { href: "#why-northforge", label: "Why Us" },
+  { href: "#why-us", label: "Why Us" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ]
