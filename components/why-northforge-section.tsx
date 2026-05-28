@@ -24,7 +24,7 @@ const reasons = [
 
 export function WhyNorthforgeSection() {
   return (
-    <section id="why-northforge" className="py-24 sm:py-32 relative bg-muted/30">
+    <section id="why-us" className="py-24 sm:py-32 relative bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-balance">
