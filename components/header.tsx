@@ -39,7 +39,7 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-4">
             <Button asChild>
-              <Link href="#contact">Start a Project</Link>
+              <a href="mailto:hello.northforge@gmail.com?subject=Project Inquiry - NorthForge">Start a Project</a>
             </Button>
           </div>
 
@@ -67,9 +67,9 @@ export function Header() {
               </Link>
             ))}
             <Button asChild className="w-full mt-4">
-              <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
+              <a href="mailto:hello.northforge@gmail.com?subject=Project Inquiry - NorthForge" onClick={() => setMobileMenuOpen(false)}>
                 Start a Project
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

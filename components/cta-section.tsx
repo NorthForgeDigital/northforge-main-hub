@@ -20,10 +20,10 @@ export function CTASection() {
             start your transformation today.
           </p>
           <Button asChild size="lg" className="group">
-            <Link href="#contact">
+            <a href="mailto:hello.northforge@gmail.com?subject=Project Inquiry - NorthForge">
               {"Let's"} Talk
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

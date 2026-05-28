@@ -34,10 +34,10 @@ function TikTokIcon({ className }: { className?: string }) {
 }
 
 const socialLinks = [
-  { href: "#", icon: FacebookIcon, label: "Facebook" },
-  { href: "#", icon: InstagramIcon, label: "Instagram" },
-  { href: "#", icon: LinkedinIcon, label: "LinkedIn" },
-  { href: "#", icon: TikTokIcon, label: "TikTok" },
+  { href: "https://facebook.com/", icon: FacebookIcon, label: "Facebook" },
+  { href: "https://instagram.com/", icon: InstagramIcon, label: "Instagram" },
+  { href: "https://linkedin.com/", icon: LinkedinIcon, label: "LinkedIn" },
+  { href: "https://tiktok.com/", icon: TikTokIcon, label: "TikTok" },
 ]
 
 export function ContactSection() {

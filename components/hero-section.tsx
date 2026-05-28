@@ -34,10 +34,10 @@ export function HeroSection() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="group">
-              <Link href="#contact">
+              <a href="mailto:hello.northforge@gmail.com?subject=Project Inquiry - NorthForge">
                 Start a Project
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </a>
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href="#services">View Services</Link>
