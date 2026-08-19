@@ -1,21 +1,32 @@
 import { Card } from "@/components/ui/card"
-import { Play, Sparkles, Palette } from "lucide-react"
+import Link from "next/link"
+import { ArrowRight, Network, Play, Sparkles } from "lucide-react"
 
-const upcomingProjects = [
+const upcomingProjects: Array<{
+  title: string
+  description: string
+  icon: typeof Play
+  status: string
+  href?: string
+}> = [
+  {
+    title: "NorthForge Website & Lead System",
+    description: "An owned internal build covering service architecture, qualification routes, funnel planning and launch infrastructure.",
+    icon: Network,
+    href: "/case-studies/northforge-internal-build",
+    status: "Internal case study",
+  },
   {
     title: "YouTube Channel System",
     description: "End-to-end content production and channel growth strategy.",
     icon: Play,
+    status: "Coming soon",
   },
   {
     title: "AI Content Workflow",
     description: "Automated content pipelines powered by AI tools.",
     icon: Sparkles,
-  },
-  {
-    title: "Brand Launch Kit",
-    description: "Complete branding package for new ventures.",
-    icon: Palette,
+    status: "Coming soon",
   },
 ]
 
@@ -44,7 +55,7 @@ export function ProjectsSection() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <span className="inline-block text-[10px] font-semibold text-primary uppercase tracking-wider mb-1">
-                    Coming Soon
+                    {project.status}
                   </span>
                   <h3 className="text-base font-semibold text-foreground">
                     {project.title}
@@ -52,6 +63,7 @@ export function ProjectsSection() {
                   <p className="text-sm text-muted-foreground mt-1">
                     {project.description}
                   </p>
+                  {project.href && <Link href={project.href} className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">View case study <ArrowRight className="h-4 w-4" /></Link>}
                 </div>
               </div>
             </Card>
