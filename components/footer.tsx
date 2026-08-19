@@ -48,7 +48,7 @@ export function Footer() {
           <Brand />
 
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Claricel Orduña, trading as NorthForge Digital Solutions. All rights reserved.
+            © {new Date().getFullYear()} NorthForge Digital Solutions. All rights reserved.
           </p>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
@@ -73,6 +73,7 @@ export function Footer() {
             <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy</Link>
             <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms</Link>
             <Link href="/intellectual-property" className="text-sm text-muted-foreground hover:text-primary transition-colors">IP</Link>
+            <Link href="/case-studies/northforge-internal-build" className="text-sm text-muted-foreground hover:text-primary transition-colors">Case Study</Link>
           </nav>
 
           <div className="flex items-center gap-3">
