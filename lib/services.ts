@@ -8,11 +8,11 @@ import {
   Image,
   LayoutDashboard,
   Palette,
+  Play,
   Search,
   Share2,
   Sparkles,
   Video,
-  Youtube,
 } from "lucide-react"
 
 export type Service = {
@@ -55,7 +55,7 @@ export const services: Service[] = [
     outcomes: ["Publishing workflow", "Content calendar", "Optimization checklist"],
     startingAt: "US$250/month",
     timeline: "Monthly engagement",
-    icon: Youtube,
+    icon: Play,
   },
   {
     slug: "social-media-management-support",
