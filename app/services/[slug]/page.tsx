@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation"
+import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react"
 import { PageShell } from "@/components/page-shell"
@@ -6,6 +7,23 @@ import { Button } from "@/components/ui/button"
 import { getService, services } from "@/lib/services"
 
 export function generateStaticParams() { return services.map(({ slug }) => ({ slug })) }
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const service = getService(slug)
+  if (!service) return {}
+  return {
+    title: `${service.title} | NorthForge Digital Solutions`,
+    description: service.shortDescription,
+    alternates: { canonical: `/services/${service.slug}` },
+    openGraph: {
+      title: `${service.title} | NorthForge Digital Solutions`,
+      description: service.shortDescription,
+      url: `/services/${service.slug}`,
+      type: "website",
+    },
+  }
+}
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
