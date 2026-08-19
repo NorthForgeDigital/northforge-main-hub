@@ -1,58 +1,8 @@
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
-import { 
-  Video, 
-  Palette, 
-  Headphones, 
-  Share2, 
-  Workflow 
-} from "lucide-react"
-
-function YoutubeIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-    </svg>
-  )
-}
-
-const services = [
-  {
-    icon: Video,
-    title: "AI Video Creation",
-    description:
-      "Transform your ideas into compelling video content using cutting-edge AI tools and creative direction.",
-  },
-  {
-    icon: Palette,
-    title: "Branding & Research Support",
-    description:
-      "Data-driven branding strategies backed by comprehensive market research and competitor analysis.",
-  },
-  {
-    icon: YoutubeIcon,
-    title: "YouTube Content Systems",
-    description:
-      "End-to-end YouTube content systems from ideation to optimization, designed for sustainable growth.",
-  },
-  {
-    icon: Headphones,
-    title: "Admin & Virtual Support",
-    description:
-      "Streamlined administrative and virtual assistance to help you focus on what matters most.",
-  },
-  {
-    icon: Share2,
-    title: "Social Media Content",
-    description:
-      "Strategic social media content creation that engages audiences and builds brand presence.",
-  },
-  {
-    icon: Workflow,
-    title: "Workflow Automation",
-    description:
-      "Custom automation solutions that eliminate repetitive tasks and boost operational efficiency.",
-  },
-]
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { services } from "@/lib/services"
 
 export function ServicesSection() {
   return (
@@ -63,8 +13,7 @@ export function ServicesSection() {
             Services We Offer
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
-            Comprehensive digital solutions tailored to accelerate your business growth
-            with AI-powered efficiency.
+            Fourteen clear starting points. Review the details first, then request the exact service you need.
           </p>
         </div>
 
@@ -72,7 +21,7 @@ export function ServicesSection() {
           {services.map((service) => (
             <Card
               key={service.title}
-              className="group hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
+              className="group flex flex-col hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
             >
               <CardHeader>
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
@@ -82,9 +31,13 @@ export function ServicesSection() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="leading-relaxed">
-                  {service.description}
+                  {service.shortDescription}
                 </CardDescription>
               </CardContent>
+              <CardFooter className="mt-auto flex flex-wrap gap-2">
+                <Button asChild variant="outline" size="sm"><Link href={`/services/${service.slug}`}>View Service</Link></Button>
+                <Button asChild size="sm"><Link href={`/start-project?service=${service.slug}`}>Request <ArrowRight className="h-3.5 w-3.5" /></Link></Button>
+              </CardFooter>
             </Card>
           ))}
         </div>

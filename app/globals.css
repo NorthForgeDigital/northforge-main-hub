@@ -30,6 +30,19 @@ body {
   color: var(--color-foreground);
 }
 
+html { scroll-behavior: smooth; }
+
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+
+.prose-northforge h2 {
+  color: var(--color-foreground);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+
+.prose-northforge p { line-height: 1.8; }
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

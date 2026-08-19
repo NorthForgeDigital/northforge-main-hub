@@ -13,15 +13,14 @@ export function CTASection() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-            Ready to build your next digital project?
+            Start with a clear request—not a confusing sales call.
           </h2>
           <p className="text-lg text-muted-foreground mb-10 text-balance">
-            {"Let's"} work together to create something exceptional. Get in touch and
-            start your transformation today.
+            Choose a service, share the outcome you need and receive a structured response. Submitting an inquiry does not guarantee project acceptance.
           </p>
           <Button asChild size="lg" className="group">
-            <Link href="#contact">
-              {"Let's"} Talk
+            <Link href="/start-project">
+              Start a Project
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

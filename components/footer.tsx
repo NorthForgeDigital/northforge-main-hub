@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Brand } from "@/components/brand"
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -44,35 +45,34 @@ export function Footer() {
     <footer className="border-t border-border py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-lg font-bold text-foreground">
-              North<span className="text-primary">Forge</span>
-            </span>
-          </Link>
+          <Brand />
 
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} NorthForge Digital Solutions. All rights reserved.
+            © {new Date().getFullYear()} Claricel Orduña, trading as NorthForge Digital Solutions. All rights reserved.
           </p>
 
-          <nav className="flex items-center gap-6">
+          <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             <Link
-              href="#services"
+              href="/#services"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               Services
             </Link>
             <Link
-              href="#projects"
+              href="/funnels"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              Projects
+              Funnel Systems
             </Link>
             <Link
-              href="#contact"
+              href="/start-project"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              Contact
+              Start a Project
             </Link>
+            <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy</Link>
+            <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms</Link>
+            <Link href="/intellectual-property" className="text-sm text-muted-foreground hover:text-primary transition-colors">IP</Link>
           </nav>
 
           <div className="flex items-center gap-3">

@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function ContactSection() {
   return (
     <section
@@ -9,100 +11,11 @@ export default function ContactSection() {
           Get in Touch
         </h2>
 
-        <p className="text-zinc-400 mb-12 text-lg">
-          Have a project in mind? Send us a message and let's build something powerful together.
+        <p className="text-zinc-400 mb-8 text-lg">
+          For project requests, use our structured intake so your service, budget, timeline and next step are recorded together.
         </p>
-
-        <form
-          action="https://formsubmit.co/hello.northforge@gmail.com"
-          method="POST"
-          className="space-y-6 text-left"
-        >
-          <input
-            type="hidden"
-            name="_captcha"
-            value="false"
-          />
-
-          <input
-            type="hidden"
-            name="_subject"
-            value="New NorthForge Lead"
-          />
-
-          <input
-            type="hidden"
-            name="_template"
-            value="table"
-          />
-
-          <div>
-            <label className="block mb-2 text-sm text-zinc-400">
-              Full Name
-            </label>
-
-            <input
-              type="text"
-              name="name"
-              required
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-cyan-400 outline-none"
-              placeholder="Your name"
-            />
-          </div>
-
-          <div>
-            <label className="block mb-2 text-sm text-zinc-400">
-              Email Address
-            </label>
-
-            <input
-              type="email"
-              name="email"
-              required
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-cyan-400 outline-none"
-              placeholder="you@example.com"
-            />
-          </div>
-
-          <div>
-            <label className="block mb-2 text-sm text-zinc-400">
-              Service Needed
-            </label>
-
-            <select
-              name="service"
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-cyan-400 outline-none"
-            >
-              <option>YouTube Management</option>
-              <option>Branding</option>
-              <option>Content Systems</option>
-              <option>Automation</option>
-              <option>Web Design</option>
-              <option>General Inquiry</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="block mb-2 text-sm text-zinc-400">
-              Message
-            </label>
-
-            <textarea
-              name="message"
-              rows={6}
-              required
-              className="w-full p-4 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-cyan-400 outline-none"
-              placeholder="Tell us about your project..."
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-cyan-400 hover:bg-cyan-300 text-black font-semibold py-4 rounded-xl transition-all"
-          >
-            Send Message
-          </button>
-        </form>
+        <Link href="/start-project" className="inline-flex rounded-xl bg-cyan-400 px-7 py-4 font-semibold text-black hover:bg-cyan-300">Open Project Request</Link>
+        <p className="mt-6 text-sm text-zinc-500">General contact: hello.northforge@gmail.com</p>
       </div>
     </section>
   )

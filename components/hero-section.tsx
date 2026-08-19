@@ -18,23 +18,23 @@ export function HeroSection() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              AI-Powered Solutions
+              Structured digital service delivery
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6 text-balance">
-            AI-Enhanced Digital Systems for{" "}
-            <span className="text-primary">Modern Businesses</span>
+            Digital work, systems and support—{" "}
+            <span className="text-primary">built to move business forward.</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-balance leading-relaxed">
-            We help creators, startups, and businesses scale faster through AI-assisted
-            workflows, content systems, branding, and automation.
+            NorthForge Digital Solutions helps businesses, creators and professionals complete
+            digital work, organize operations and turn scattered ideas into dependable systems.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="group">
-              <Link href="#contact">
+              <Link href="/start-project">
                 Start a Project
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>

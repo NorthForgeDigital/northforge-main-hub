@@ -6,6 +6,7 @@ import { ProjectsSection } from "@/components/projects-section"
 import { CTASection } from "@/components/cta-section"
 import ContactSection from "@/components/contact-section"
 import { Footer } from "@/components/footer"
+import { HelpWidget } from "@/components/help-widget"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
+      <HelpWidget />
     </>
   )
 }

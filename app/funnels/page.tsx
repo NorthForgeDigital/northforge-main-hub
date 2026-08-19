@@ -1,0 +1,20 @@
+import Link from "next/link"
+import { ArrowRight, CheckCircle2 } from "lucide-react"
+import { PageShell } from "@/components/page-shell"
+import { Button } from "@/components/ui/button"
+
+const forge = [
+  ["Focus", "Clarify the offer, audience and conversion goal."],
+  ["Organize", "Map the journey, information and qualification rules."],
+  ["Route", "Send each lead to the correct next step and record."],
+  ["Guide", "Use clear prompts, follow-up and booking instructions."],
+  ["Evolve", "Review evidence and improve the system over time."],
+]
+
+export default function FunnelPage() {
+  return <PageShell>
+    <section className="relative overflow-hidden py-20 sm:py-28"><div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(20,184,166,.15),transparent_45%)]" /><div className="relative mx-auto max-w-6xl px-4 text-center sm:px-6"><p className="font-mono text-sm uppercase tracking-[.2em] text-primary">NorthForge Funnel Systems</p><h1 className="mx-auto mt-4 max-w-4xl text-4xl font-bold tracking-tight sm:text-6xl">Turn scattered interest into qualified conversations.</h1><p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">A practical lead and booking system connecting your message, qualification, intake, follow-up, CRM handoff and sales ownership.</p><div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row"><Button asChild size="lg"><Link href="/start-project?service=lead-booking-funnel-systems">Explore Funnel Systems <ArrowRight /></Link></Button><Button asChild size="lg" variant="outline"><Link href="/funnels/fit-7">Take the FIT-7™ Assessment</Link></Button></div></div></section>
+    <section className="border-y border-border bg-muted/30 py-20"><div className="mx-auto max-w-6xl px-4 sm:px-6"><div className="mb-10 max-w-2xl"><p className="text-sm font-semibold text-primary">THE FORGE™ METHOD</p><h2 className="mt-3 text-3xl font-bold">Five stages. One accountable journey.</h2></div><div className="grid gap-4 md:grid-cols-5">{forge.map(([title, text], index) => <article className="rounded-xl border border-border bg-card p-5" key={title}><span className="font-mono text-sm text-primary">0{index + 1}</span><h3 className="mt-4 font-semibold">{title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">{text}</p></article>)}</div></div></section>
+    <section className="py-20"><div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-2"><div><h2 className="text-3xl font-bold">What the pilot can include</h2><ul className="mt-6 grid gap-4">{["Offer and message alignment", "Landing or inquiry journey", "Qualification and routing rules", "Booking and follow-up sequence", "CRM-ready field map and handoff", "Measurement and improvement checklist"].map(x => <li className="flex gap-3 text-muted-foreground" key={x}><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />{x}</li>)}</ul></div><div className="rounded-2xl border border-primary/30 bg-primary/5 p-8"><p className="text-sm text-primary">FLAGSHIP PILOT</p><p className="mt-3 text-4xl font-bold">From US$600</p><p className="mt-2 text-muted-foreground">Typical delivery: 10–14 business days after scope, access and content are confirmed.</p><p className="mt-6 text-sm leading-6 text-muted-foreground">The pilot price is indicative. Advertising spend, paid software, taxes and third-party services are excluded unless written into the proposal.</p></div></div></section>
+  </PageShell>
+}

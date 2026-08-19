@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "NorthForge Digital Solutions | AI-Enhanced Digital Systems",
   description:
-    "We help creators, startups, and businesses scale faster through AI-assisted workflows, content systems, branding, and automation.",
+    "Structured digital services, business systems, content support, automation, websites and lead-booking funnels.",
   keywords: [
     "AI",
     "digital agency",
