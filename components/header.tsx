@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/#services", label: "Services" },
   { href: "/funnels", label: "Funnel Systems" },
   { href: "/#why-us", label: "Why Us" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/#talk-to-us", label: "Talk to Us" },
 ]
 
 export function Header() {
