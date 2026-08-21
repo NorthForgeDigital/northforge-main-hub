@@ -71,6 +71,25 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
   transition: transform 300ms ease, opacity 300ms ease;
 }
 
+.nf-number-bubble {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  height: 3.5rem;
+  min-width: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in oklch, var(--color-primary) 28%, transparent);
+  border-radius: 9999px;
+  background: color-mix(in oklch, var(--color-primary) 7%, transparent);
+  padding-inline: 0.65rem;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 300ms ease, border-color 300ms ease, background-color 300ms ease, color 300ms ease, box-shadow 300ms ease;
+}
+
 @media (hover: hover) and (pointer: fine) {
   :where(.nf-interactive-card, article.rounded-xl.border, article.rounded-2xl.border, aside.rounded-2xl.border, section.rounded-2xl.border, div.rounded-2xl.border.bg-card):hover {
     transform: translateY(-0.5rem);
@@ -95,6 +114,14 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
     transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease;
   }
 
+  .nf-interactive-card:hover .nf-number-bubble {
+    transform: scale(1.1);
+    border-color: color-mix(in oklch, var(--color-primary) 85%, white);
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    box-shadow: 0 0 12px rgba(20, 184, 166, 0.78), 0 0 32px rgba(20, 184, 166, 0.38);
+  }
+
   :where(.nf-button, a.inline-flex.rounded-xl, button.rounded-xl.bg-primary, button.rounded-full.bg-primary):hover {
     transform: translateY(-0.25rem);
     box-shadow: 0 0 38px rgba(20, 184, 166, 0.24);
@@ -109,7 +136,8 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
   :where(.nf-interactive-card, article.rounded-xl.border, article.rounded-2xl.border, aside.rounded-2xl.border, section.rounded-2xl.border, div.rounded-2xl.border.bg-card),
   :where(.nf-interactive-card, article.rounded-xl.border, article.rounded-2xl.border, aside.rounded-2xl.border, section.rounded-2xl.border, div.rounded-2xl.border.bg-card)::after,
   :where(.nf-button, a.inline-flex.rounded-xl, button.rounded-xl.bg-primary, button.rounded-full.bg-primary),
-  :where(.nf-button, a.inline-flex.rounded-xl, button.rounded-xl.bg-primary) .lucide-arrow-right {
+  :where(.nf-button, a.inline-flex.rounded-xl, button.rounded-xl.bg-primary) .lucide-arrow-right,
+  .nf-number-bubble {
     transition-duration: 0.01ms !important;
     transform: none !important;
   }
