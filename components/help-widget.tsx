@@ -18,6 +18,7 @@ export function HelpWidget() {
             <Link className="rounded-lg border border-border p-3 hover:border-primary/60" href="/#services">Compare all services</Link>
             <Link className="rounded-lg border border-border p-3 hover:border-primary/60" href="/start-project?service=custom-project">Help me choose a service</Link>
             <Link className="rounded-lg border border-border p-3 hover:border-primary/60" href="/funnels/fit-7">Check funnel readiness with FIT-7™</Link>
+            <Link className="rounded-lg border border-border p-3 hover:border-primary/60" href="/feedback">What do you think?</Link>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">NorthForge reviews every request. The Help panel does not collect sensitive information.</p>
         </div>
