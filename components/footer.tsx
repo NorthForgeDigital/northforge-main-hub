@@ -36,7 +36,7 @@ function YouTubeIcon({ className }: { className?: string }) {
 const socialLinks = [
   { href: "https://www.facebook.com/northforgedigital/", icon: FacebookIcon, label: "Facebook" },
   { href: "https://www.instagram.com/northforgedigital", icon: InstagramIcon, label: "Instagram" },
-  { href: "https://www.linkedin.com/company/northforgedigital/", icon: LinkedinIcon, label: "LinkedIn" },
+  { href: "https://www.linkedin.com/company/northforge-digital-solutions/", icon: LinkedinIcon, label: "LinkedIn" },
   { href: "https://www.youtube.com/@NorthForgeDigital", icon: YouTubeIcon, label: "YouTube" },
 ]
 
