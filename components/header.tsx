@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Brand } from "@/components/brand"
@@ -15,6 +16,13 @@ const navLinks = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+
+  const isActive = (href: string) => {
+    if (href === "/funnels") return pathname.startsWith("/funnels")
+    if (href === "/#services") return pathname.startsWith("/services")
+    return false
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -27,9 +35,11 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`relative rounded-full px-3 py-2 text-sm transition-all duration-200 ${isActive(link.href) ? "bg-primary/10 text-primary shadow-[0_0_24px_rgba(20,184,166,.12)]" : "text-muted-foreground hover:bg-primary/5 hover:text-primary"}`}
               >
                 {link.label}
+                {isActive(link.href) && <span className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-primary" />}
               </Link>
             ))}
           </nav>
@@ -57,7 +67,8 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block text-sm text-muted-foreground hover:text-primary transition-colors duration-200 py-2"
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`block rounded-lg px-3 py-2 text-sm transition-colors duration-200 ${isActive(link.href) ? "bg-primary/10 font-semibold text-primary" : "text-muted-foreground hover:bg-primary/5 hover:text-primary"}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
