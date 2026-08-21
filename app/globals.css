@@ -30,6 +30,119 @@ body {
   color: var(--color-foreground);
 }
 
+html { scroll-behavior: smooth; }
+
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+
+.prose-northforge h2 {
+  color: var(--color-foreground);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+
+.prose-northforge p { line-height: 1.8; }
+
+:where(.nf-interactive-card, article.rounded-xl.border, article.rounded-2xl.border, aside.rounded-2xl.border, section.rounded-2xl.border, div.rounded-2xl.border.bg-card) {
+  position: relative;
+  overflow: hidden;
+  transition: transform 300ms ease, border-color 300ms ease, background-color 300ms ease, box-shadow 300ms ease;
+}
+
+:where(.nf-interactive-card, article.rounded-xl.border, article.rounded-2xl.border, aside.rounded-2xl.border, section.rounded-2xl.border, div.rounded-2xl.border.bg-card)::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 8rem;
+  height: 8rem;
+  right: -4rem;
+  top: -4rem;
+  border-radius: 9999px;
+  background: color-mix(in oklch, var(--color-primary) 0%, transparent);
+  filter: blur(28px);
+  transition: background 450ms ease, transform 450ms ease;
+}
+
+:where(.nf-button, a.inline-flex.rounded-xl, button.rounded-xl.bg-primary, button.rounded-full.bg-primary) {
+  transition: transform 300ms ease, border-color 300ms ease, background-color 300ms ease, color 300ms ease, box-shadow 300ms ease;
+}
+
+:where(.nf-button, a.inline-flex.rounded-xl, button.rounded-xl.bg-primary) .lucide-arrow-right {
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.nf-number-bubble {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  height: 3.5rem;
+  min-width: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in oklch, var(--color-primary) 28%, transparent);
+  border-radius: 9999px;
+  background: color-mix(in oklch, var(--color-primary) 7%, transparent);
+  padding-inline: 0.65rem;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 300ms ease, border-color 300ms ease, background-color 300ms ease, color 300ms ease, box-shadow 300ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :where(.nf-interactive-card, article.rounded-xl.border, article.rounded-2xl.border, aside.rounded-2xl.border, section.rounded-2xl.border, div.rounded-2xl.border.bg-card):hover {
+    transform: translateY(-0.5rem);
+    border-color: color-mix(in oklch, var(--color-primary) 70%, transparent);
+    background-color: color-mix(in oklch, var(--color-card) 93%, var(--color-primary));
+    box-shadow: 0 20px 55px rgba(20, 184, 166, 0.16);
+  }
+
+  :where(.nf-interactive-card, article.rounded-xl.border, article.rounded-2xl.border, aside.rounded-2xl.border, section.rounded-2xl.border, div.rounded-2xl.border.bg-card):hover::after {
+    background: color-mix(in oklch, var(--color-primary) 24%, transparent);
+    transform: scale(1.2);
+  }
+
+  :where(.nf-interactive-card, article.rounded-xl.border, article.rounded-2xl.border, aside.rounded-2xl.border, section.rounded-2xl.border, div.rounded-2xl.border.bg-card):hover :is(h2, h3, .nf-card-title) {
+    color: var(--color-primary);
+    transition: color 300ms ease;
+  }
+
+  :where(.nf-interactive-card, article.rounded-xl.border, article.rounded-2xl.border, aside.rounded-2xl.border, section.rounded-2xl.border, div.rounded-2xl.border.bg-card):hover [class*="bg-primary/"] {
+    transform: scale(1.08);
+    box-shadow: 0 0 28px rgba(20, 184, 166, 0.18);
+    transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease;
+  }
+
+  .nf-interactive-card:hover .nf-number-bubble {
+    transform: scale(1.1);
+    border-color: color-mix(in oklch, var(--color-primary) 85%, white);
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    box-shadow: 0 0 12px rgba(20, 184, 166, 0.78), 0 0 32px rgba(20, 184, 166, 0.38);
+  }
+
+  :where(.nf-button, a.inline-flex.rounded-xl, button.rounded-xl.bg-primary, button.rounded-full.bg-primary):hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0 38px rgba(20, 184, 166, 0.24);
+  }
+
+  :where(.nf-button, a.inline-flex.rounded-xl, button.rounded-xl.bg-primary):hover .lucide-arrow-right {
+    transform: translateX(0.3rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(.nf-interactive-card, article.rounded-xl.border, article.rounded-2xl.border, aside.rounded-2xl.border, section.rounded-2xl.border, div.rounded-2xl.border.bg-card),
+  :where(.nf-interactive-card, article.rounded-xl.border, article.rounded-2xl.border, aside.rounded-2xl.border, section.rounded-2xl.border, div.rounded-2xl.border.bg-card)::after,
+  :where(.nf-button, a.inline-flex.rounded-xl, button.rounded-xl.bg-primary, button.rounded-full.bg-primary),
+  :where(.nf-button, a.inline-flex.rounded-xl, button.rounded-xl.bg-primary) .lucide-arrow-right,
+  .nf-number-bubble {
+    transition-duration: 0.01ms !important;
+    transform: none !important;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
