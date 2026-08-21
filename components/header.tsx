@@ -61,7 +61,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           <Brand />
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -75,14 +75,14 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <Button asChild className={projectActive ? "ring-2 ring-primary ring-offset-2 ring-offset-background shadow-[0_0_30px_rgba(20,184,166,.28)]" : ""}>
               <Link href="/start-project" aria-current={projectActive ? "page" : undefined}>Start a Project</Link>
             </Button>
           </div>
 
           <button
-            className="md:hidden text-foreground"
+            className="lg:hidden text-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -92,7 +92,7 @@ export function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-background border-t border-border">
+        <div className="lg:hidden bg-background border-t border-border">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link
