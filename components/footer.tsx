@@ -74,6 +74,7 @@ export function Footer() {
             <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms</Link>
             <Link href="/intellectual-property" className="text-sm text-muted-foreground hover:text-primary transition-colors">IP</Link>
             <Link href="/case-studies/northforge-internal-build" className="text-sm text-muted-foreground hover:text-primary transition-colors">Case Study</Link>
+            <Link href="/feedback" className="text-sm text-muted-foreground hover:text-primary transition-colors">What Do You Think?</Link>
           </nav>
 
           <div className="flex items-center gap-3">
