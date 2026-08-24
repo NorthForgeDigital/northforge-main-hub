@@ -13,28 +13,37 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 })
 
+const siteTitle = "NorthForge Digital Solutions | Digital Services, Systems & Business Support"
+const siteDescription =
+  "Managed project-based digital services, business systems, content support, websites, funnel systems, automation, AI setup, and related business support."
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://northforge-main-hub.vercel.app"),
-  title: "NorthForge Digital Solutions | AI-Enhanced Digital Systems",
-  description:
-    "Structured digital services, business systems, content support, automation, websites and lead-booking funnels.",
+  title: siteTitle,
+  description: siteDescription,
   keywords: [
-    "AI",
-    "digital agency",
+    "digital services",
+    "business systems",
+    "business support",
     "automation",
-    "branding",
-    "content creation",
-    "workflow automation",
+    "AI setup",
+    "websites",
+    "funnel systems",
+    "content support",
   ],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "NorthForge Digital Solutions | AI-Enhanced Digital Systems",
-    description: "Structured digital services, business systems, content support, automation, websites and lead-booking funnels.",
+    title: siteTitle,
+    description: siteDescription,
     url: "/",
     siteName: "NorthForge Digital Solutions",
     type: "website",
   },
-  twitter: { card: "summary_large_image" },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
 }
 
 export const viewport: Viewport = {
@@ -59,7 +68,7 @@ export default function RootLayout({
             name: "NorthForge Digital Solutions",
             url: "https://northforge-main-hub.vercel.app",
             email: "hello.northforge@gmail.com",
-            description: "Structured digital services, business systems, content support, automation, websites and lead-booking funnels.",
+            description: siteDescription,
             areaServed: "Worldwide",
           }).replace(/</g, "\\u003c") }}
         />
