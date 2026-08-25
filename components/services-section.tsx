@@ -13,7 +13,7 @@ export function ServicesSection() {
             Services We Offer
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
-            Fourteen clear starting points. Review the details first, then request the exact service you need.
+            Fifteen clear starting points. Review the details first, then request the exact service you need.
           </p>
         </div>
 
