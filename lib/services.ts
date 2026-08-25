@@ -13,6 +13,7 @@ import {
   Share2,
   Sparkles,
   Video,
+  Workflow,
 } from "lucide-react"
 
 export type Service = {
@@ -146,6 +147,16 @@ export const services: Service[] = [
     startingAt: "US$300",
     timeline: "5–14 business days",
     icon: Bot,
+  },
+  {
+    slug: "appointment-workflow-automation",
+    title: "Appointment & Workflow Automation Systems",
+    shortDescription: "Booking, reminders, lead routing and follow-up systems for clinics, agents and service businesses.",
+    description: "We map your appointment and follow-up process, build a reliable automation workflow, connect the required business tools, test failure cases and document how the system is monitored, debugged and handed back to your team.",
+    outcomes: ["Appointment workflow map", "Configured automation system", "Testing, debugging and handoff guide"],
+    startingAt: "US$500 pilot",
+    timeline: "7–14 business days",
+    icon: Workflow,
   },
   {
     slug: "lead-booking-funnel-systems",
